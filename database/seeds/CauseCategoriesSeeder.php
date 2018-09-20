@@ -14,6 +14,9 @@ class CauseCategoriesSeeder extends CsvImportSeeder
      */
     public function run()
     {
-        $this->csvGet('App\CauseCategory', 'd:\PHP_Project\sudreestr_laravel\data\2016\cause_categories.csv');
+        foreach ($this->years as $year) {
+            $this->csvGet('App\CauseCategory', $this->dataDir . '\\' . $year . '\cause_categories.csv');
+        }
+
     }
 }

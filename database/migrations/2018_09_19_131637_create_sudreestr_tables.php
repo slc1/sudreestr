@@ -95,7 +95,7 @@ class CreateSudreestrTables extends Migration
                 $table->integer('status');
                 $table->date('date_publ');
                 $table->tinyInteger('file_created')->default(0);
-                $table->bigInteger('file_id')->nullable()->unsigned();
+                $table->integer('file_create_attempts')->default(0)->unsigned();
             });
         }
     }

@@ -11,6 +11,8 @@ class InstancesSeeder extends CsvImportSeeder
      */
     public function run()
     {
-        $this->csvGet('App\Instance', 'd:\PHP_Project\sudreestr_laravel\data\2016\instances.csv');
+        foreach ($this->years as $year) {
+            $this->csvGet('App\Instance', $this->dataDir . '\\' . $year . '\instances.csv');
+        }
     }
 }

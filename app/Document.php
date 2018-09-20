@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Storage;
 
 class Document extends Model
 {
@@ -25,5 +26,10 @@ class Document extends Model
         'status',
         'date_publ',
     ];
+
+    public function getContent()
+    {
+        return gzdecode(Storage::disk('public')->get(str_replace('-', '/', $this->receipt_date)  . '/' . $this->doc_url));
+    }
 
 }

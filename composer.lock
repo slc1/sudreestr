@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1abc336a59158ebe15904f0baad48ca0",
+    "content-hash": "1247b6cedf0efda4068457903610861c",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -365,6 +365,43 @@
                 "trusted proxy"
             ],
             "time": "2018-02-07T20:20:57+00:00"
+        },
+        {
+            "name": "henck/rtf-to-html",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/henck/rtf-html-php.git",
+                "reference": "bb93fafc0ba05f736260bc2ebe563b36988a44bb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/henck/rtf-html-php/zipball/bb93fafc0ba05f736260bc2ebe563b36988a44bb",
+                "reference": "bb93fafc0ba05f736260bc2ebe563b36988a44bb",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "rtf-html-php.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Alexander van Oostenrijk",
+                    "email": "alex.vanoostenrijk@gmail.com"
+                }
+            ],
+            "description": "RTF to HTML converter in PHP",
+            "keywords": [
+                "converter",
+                "rtf"
+            ],
+            "time": "2018-09-03T15:39:29+00:00"
         },
         {
             "name": "jakub-onderka/php-console-color",
@@ -4139,6 +4176,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
+        "henck/rtf-to-html": 20,
         "zizaco/entrust": 20
     },
     "prefer-stable": true,

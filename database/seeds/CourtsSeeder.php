@@ -11,6 +11,8 @@ class CourtsSeeder extends CsvImportSeeder
      */
     public function run()
     {
-        $this->csvGet('App\Court', 'd:\PHP_Project\sudreestr_laravel\data\2016\courts.csv');
+        foreach ($this->years as $year) {
+            $this->csvGet('App\Court', $this->dataDir . '\\' . $year . '\courts.csv');
+        }
     }
 }

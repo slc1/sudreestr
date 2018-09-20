@@ -11,6 +11,8 @@ class RegionsSeeder extends CsvImportSeeder
      */
     public function run()
     {
-        $this->csvGet('App\Region', 'd:\PHP_Project\sudreestr_laravel\data\2016\regions.csv');
+        foreach ($this->years as $year) {
+            $this->csvGet('App\Region', $this->dataDir . '\\' . $year . '\regions.csv');
+        }
     }
 }

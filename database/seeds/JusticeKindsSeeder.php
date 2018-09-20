@@ -11,6 +11,8 @@ class JusticeKindsSeeder extends CsvImportSeeder
      */
     public function run()
     {
-        $this->csvGet('App\JusticeKind', 'd:\PHP_Project\sudreestr_laravel\data\2016\justice_kinds.csv');
+        foreach ($this->years as $year) {
+            $this->csvGet('App\JusticeKind', $this->dataDir . '\\' . $year . '\justice_kinds.csv');
+        }
     }
 }
