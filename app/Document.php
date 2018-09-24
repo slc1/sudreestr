@@ -29,7 +29,7 @@ class Document extends Model
 
     public function getContent()
     {
-        return gzdecode(Storage::disk('public')->get(str_replace('-', '/', $this->receipt_date)  . '/' . $this->doc_url));
+        return gzdecode(Storage::disk('public')->get(str_replace('-', '/', $this->receipt_date)  . '/' . $this->doc_url . '.gz'));
     }
 
 }

@@ -52,7 +52,7 @@ class ParseFiles extends Command
                 $content = null;
             }
             if ($content) {
-                Storage::disk('public')->put(str_replace('-', '/', $document->receipt_date)  . '/' . $document->doc_url, gzencode($content));
+                Storage::disk('public')->put(str_replace('-', '/', $document->receipt_date)  . '/' . $document->doc_url . ".gz", gzencode($content));
                 $document->file_created = true;
                 $document->save();
                 echo 'Uploaded successfully ' . Document::$urlCommonString . $document->doc_url . PHP_EOL;
